@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="BattleUI" type="Control"]
+anchor_right = 1.773
+anchor_bottom = 1.907
+offset_right = 0.447876
+offset_bottom = -0.200073
