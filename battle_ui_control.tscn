@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bj2o2e2bgidm8"]
-
-[ext_resource type="Texture2D" uid="uid://wf7ff4b7a2es" path="res://assets/projectfiles4pixelart/bgtile.png" id="1_tkol5"]
+[gd_scene format=3 uid="uid://bj2o2e2bgidm8"]
 
 [node name="Battle UI Control" type="Control"]
 layout_mode = 3
@@ -9,10 +7,3 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, 0)
-texture = ExtResource("1_tkol5")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 1152, 648)

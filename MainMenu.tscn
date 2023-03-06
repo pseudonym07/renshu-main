@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dv475oyqy81gm"]
+
+[node name="MainMenu" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 120
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 120
+theme_override_constants/margin_bottom = 80
+
+[node name="TitleDisplay" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="FightButton" type="TextureRect" parent="."]
+layout_mode = 2
+
+[node name="QuitButton" type="TextureRect" parent="."]
+layout_mode = 2
