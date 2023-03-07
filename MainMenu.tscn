@@ -1,18 +1,45 @@
-[gd_scene format=3 uid="uid://dv475oyqy81gm"]
+[gd_scene load_steps=6 format=3 uid="uid://dv475oyqy81gm"]
 
-[node name="MainMenu" type="MarginContainer"]
+[ext_resource type="Texture2D" uid="uid://hao6gvqf58vm" path="res://assets/titles_screen_assets/renshutitle.png" id="1_esaqh"]
+[ext_resource type="Texture2D" uid="uid://sgv3cqbyndb6" path="res://assets/titles_screen_assets/letsfightbutton.png" id="2_vwgf7"]
+[ext_resource type="Texture2D" uid="uid://l1qwfpc1ma32" path="res://assets/titles_screen_assets/quitbutton.png" id="3_6wi0x"]
+[ext_resource type="Script" path="res://Let's Fight Button.gd" id="3_rwwhb"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_0jor7"]
+
+[node name="MainMenu" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-theme_override_constants/margin_left = 120
-theme_override_constants/margin_top = 80
-theme_override_constants/margin_right = 120
-theme_override_constants/margin_bottom = 80
 
-[node name="TitleDisplay" type="TextureRect" parent="."]
-layout_mode = 2
+[node name="White BG" type="TextureRect" parent="Control"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("CanvasTexture_0jor7")
 
-[node name="FightButton" type="TextureRect" parent="."]
-layout_mode = 2
+[node name="Quit Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 472.0
+offset_right = 880.0
+offset_bottom = 584.0
+icon = ExtResource("3_6wi0x")
 
-[node name="QuitButton" type="TextureRect" parent="."]
-layout_mode = 2
+[node name="Let\'s Fight Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 328.0
+offset_right = 866.0
+offset_bottom = 483.0
+icon = ExtResource("2_vwgf7")
+script = ExtResource("3_rwwhb")
+
+[node name="Renshu Title Icon" type="TextureRect" parent="Control"]
+offset_left = 136.0
+offset_top = 64.0
+offset_right = 1040.0
+offset_bottom = 340.0
+texture = ExtResource("1_esaqh")
