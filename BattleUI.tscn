@@ -1,7 +1,21 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=3 uid="uid://day3snk63p8hy"]
+
+[ext_resource type="PackedScene" uid="uid://dqo6qfxly7w3h" path="res://battlebgmusic.tscn" id="1_gstjo"]
 
 [node name="BattleUI" type="Control"]
+layout_mode = 3
 anchor_right = 1.773
 anchor_bottom = 1.907
 offset_right = 0.447876
 offset_bottom = -0.200073
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 248.0
+offset_right = 544.0
+offset_bottom = 274.0
+theme_override_font_sizes/font_size = 50
+text = "this works"
+
+[node name="AudioStreamPlayer2D" parent="." instance=ExtResource("1_gstjo")]

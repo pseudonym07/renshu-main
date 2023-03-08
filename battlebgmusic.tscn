@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqo6qfxly7w3h"]
+
+[ext_resource type="AudioStream" uid="uid://dav0jyj8yoaas" path="res://assets/music/renshu_battle_theme.wav" id="1_5rl8q"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+position = Vector2(-1, 0)
+stream = ExtResource("1_5rl8q")
+autoplay = true

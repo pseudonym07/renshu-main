@@ -1,2 +1,6 @@
 res://default_env.tres
 res://MainMenu.tscn
+res://Let's Fight Button.gd
+res://BattleUI.tscn
+res://Quit Button.gd
+res://battlebgmusic.tscn
