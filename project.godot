@@ -19,7 +19,6 @@ config/icon="res://assets/titles_screen_assets/sns.png"
 
 [display]
 
-mouse_cursor/custom_image="res://assets/titles_screen_assets/arrow-removebg-preview.png"
 window/stretch/mode="canvas_items"
 
 [gui]

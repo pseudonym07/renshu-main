@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv475oyqy81gm"]
+[gd_scene load_steps=9 format=3 uid="uid://dv475oyqy81gm"]
 
 [ext_resource type="Texture2D" uid="uid://hao6gvqf58vm" path="res://assets/titles_screen_assets/renshutitle.png" id="1_esaqh"]
 [ext_resource type="Script" path="res://Quit Button.gd" id="2_ucdkl"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" path="res://Let's Fight Button.gd" id="3_rwwhb"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_0jor7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bjkwn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qlpcy"]
 
 [node name="MainMenu" type="Node"]
 
@@ -28,6 +32,7 @@ offset_left = 320.0
 offset_top = 472.0
 offset_right = 880.0
 offset_bottom = 584.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_bjkwn")
 icon = ExtResource("3_6wi0x")
 flat = true
 script = ExtResource("2_ucdkl")
@@ -38,6 +43,7 @@ offset_left = 256.0
 offset_top = 328.0
 offset_right = 866.0
 offset_bottom = 483.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_qlpcy")
 action_mode = 0
 icon = ExtResource("2_vwgf7")
 flat = true
