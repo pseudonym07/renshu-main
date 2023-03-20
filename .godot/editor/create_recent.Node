@@ -1,6 +1,7 @@
-AudioStreamPlayer2D
 Label
+TextEdit
 Node
+AudioStreamPlayer2D
 Button
 Control
 TextureRect

@@ -1,23 +1,27 @@
 2a60927148abd1d33b818b535e306557
-::res://::1678300790
-battlebgmusic.tscn::PackedScene::8313095936003295031::1678299676::0::1::::<><>::uid://dav0jyj8yoaas
-BattleUI.tscn::PackedScene::7210540036962626466::1678299676::0::1::::<><>::uid://dqo6qfxly7w3h
-default_env.tres::Environment::5684361257065672036::1678299676::0::1::::<><>::
-icon.png::CompressedTexture2D::7108641680819812028::1676650552::1677695883::1::::<><>::
-Let's Fight Button.gd::GDScript::-1::1678299430::0::1::::<>Button<>::
-MainMenu.tscn::PackedScene::8695092013093964616::1678299676::0::1::::<><>::uid://hao6gvqf58vm<>res://Quit Button.gd<>uid://sgv3cqbyndb6<>uid://l1qwfpc1ma32<>res://Let's Fight Button.gd
-Quit Button.gd::GDScript::-1::1678299430::0::1::::<>Button<>::
-README.md::TextFile::-1::1677782470::0::1::::<><>::
-::res://assets/::1678300779
-::res://assets/music/::1678299430
-renshu_battle_theme.wav::AudioStreamWAV::7204149256874498658::1678299430::1678299430::1::::<><>::
-::res://assets/projectfiles4pixelart/::1677867571
-bgtile.png::CompressedTexture2D::1556428629049370982::1676658454::1677867571::1::::<><>::
-::res://assets/titles_screen_assets/::1678300790
-arrow-removebg-preview.png::CompressedTexture2D::1298051673093951686::1678206253::1678206253::1::::<><>::
-fightFight.png::CompressedTexture2D::5117073168896235407::1678300762::1678300790::1::::<><>::
-letsfightbutton.png::CompressedTexture2D::1277110640927967317::1678126325::1678126625::1::::<><>::
-quitbutton.png::CompressedTexture2D::826762146888986707::1678126409::1678126625::1::::<><>::
-renshutitle.png::CompressedTexture2D::492227651291869018::1678125928::1678126625::1::::<><>::
-sns.png::CompressedTexture2D::8190436885477968695::1678210301::1678210357::1::::<><>::
-sword-removebg-preview.png::CompressedTexture2D::514997905507364149::1678299610::1678299630::1::::<><>::
+::res://::1679331599
+askPname.tscn::PackedScene::2720553054770239191::1679331291::0::1::::<><>::
+battlebgmusic.tscn::PackedScene::8313095936003295031::1679326232::0::1::::<><>::uid://dav0jyj8yoaas
+BattleUI.tscn::PackedScene::7210540036962626466::1679326232::0::1::::<><>::uid://dqo6qfxly7w3h
+default_env.tres::Environment::5684361257065672036::1679331291::0::1::::<><>::
+icon.png::CompressedTexture2D::7108641680819812028::1676654152::1677699483::1::::<><>::
+Let's Fight Button.gd::GDScript::-1::1678303030::0::1::::<>Button<>::
+MainMenu.tscn::PackedScene::8695092013093964616::1679326232::0::1::::<><>::uid://hao6gvqf58vm<>res://Quit Button.gd<>uid://sgv3cqbyndb6<>uid://l1qwfpc1ma32<>res://Let's Fight Button.gd
+Quit Button.gd::GDScript::-1::1678303030::0::1::::<>Button<>::
+README.md::TextFile::-1::1677786070::0::1::::<><>::
+::res://assets/::1679331599
+::res://assets/font/::1679331596
+::res://assets/font/shent/::1679331599
+Shenttpuro Font.ttf::FontFile::5560979688351699705::1679331570::1679331599::1::::<><>::
+::res://assets/music/::1678303030
+renshu_battle_theme.wav::AudioStreamWAV::7204149256874498658::1678303030::1678303030::1::::<><>::
+::res://assets/projectfiles4pixelart/::1677871171
+bgtile.png::CompressedTexture2D::1556428629049370982::1676662054::1677871171::1::::<><>::
+::res://assets/titles_screen_assets/::1678304390
+arrow-removebg-preview.png::CompressedTexture2D::1298051673093951686::1678209853::1678209853::1::::<><>::
+fightFight.png::CompressedTexture2D::5117073168896235407::1678304362::1678304390::1::::<><>::
+letsfightbutton.png::CompressedTexture2D::1277110640927967317::1678129925::1678130225::1::::<><>::
+quitbutton.png::CompressedTexture2D::826762146888986707::1678130009::1678130225::1::::<><>::
+renshutitle.png::CompressedTexture2D::492227651291869018::1678129528::1678130225::1::::<><>::
+sns.png::CompressedTexture2D::8190436885477968695::1678213901::1678213957::1::::<><>::
+sword-removebg-preview.png::CompressedTexture2D::514997905507364149::1678303210::1678303230::1::::<><>::

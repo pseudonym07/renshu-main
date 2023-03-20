@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://be04d1x5axaa6"]
+
+[ext_resource type="FontFile" uid="uid://clh1r1t54fjr2" path="res://assets/font/shent/Shenttpuro Font.ttf" id="1_5k6a4"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_8hdbg"]
+
+[node name="Ask for Player Name" type="Node"]
+
+[node name="White BG" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("CanvasTexture_8hdbg")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+visible = false
+offset_left = 686.0
+offset_top = 162.0
+offset_right = 967.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("1_5k6a4")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 166.0
+offset_right = 878.0
+offset_bottom = 339.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5k6a4")
+theme_override_font_sizes/font_size = 72
+text = "What's your name?"
