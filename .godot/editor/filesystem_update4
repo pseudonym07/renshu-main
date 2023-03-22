@@ -3,3 +3,5 @@ res://MainMenu.tscn
 res://BattleUI.tscn
 res://battlebgmusic.tscn
 res://askPname.tscn
+res://Let's Fight Button.gd
+res://Entry Box.gd

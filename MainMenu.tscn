@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dv475oyqy81gm"]
 
-[ext_resource type="Texture2D" uid="uid://hao6gvqf58vm" path="res://assets/titles_screen_assets/renshutitle.png" id="1_esaqh"]
 [ext_resource type="Script" path="res://Quit Button.gd" id="2_ucdkl"]
 [ext_resource type="FontFile" uid="uid://clh1r1t54fjr2" path="res://assets/font/shent/Shenttpuro Font.ttf" id="3_ltvjv"]
 [ext_resource type="Script" path="res://Let's Fight Button.gd" id="3_rwwhb"]
+[ext_resource type="Texture2D" uid="uid://hlp677bnerr6" path="res://assets/titles_screen_assets/sword-removebg-preview.png" id="4_it7nq"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_0jor7"]
 
@@ -25,9 +25,9 @@ texture = SubResource("CanvasTexture_0jor7")
 
 [node name="Quit Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 269.0
+offset_left = 278.0
 offset_top = 460.0
-offset_right = 829.0
+offset_right = 838.0
 offset_bottom = 638.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
@@ -40,27 +40,30 @@ script = ExtResource("2_ucdkl")
 
 [node name="Let\'s Fight Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 256.0
+offset_left = 264.0
 offset_top = 328.0
-offset_right = 866.0
-offset_bottom = 483.0
+offset_right = 874.0
+offset_bottom = 492.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(1, 0.439216, 0.878431, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_ltvjv")
 theme_override_font_sizes/font_size = 66
 theme_override_styles/hover = SubResource("StyleBoxTexture_qlpcy")
 action_mode = 0
-text = "Let's Fight!"
+text = "Fight!"
 flat = true
 script = ExtResource("3_rwwhb")
 
-[node name="Renshu Title Icon" type="TextureRect" parent="Control"]
+[node name="Renshu Title Icon" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 136.0
-offset_top = 64.0
-offset_right = 1040.0
-offset_bottom = 340.0
-texture = ExtResource("1_esaqh")
+offset_left = 154.0
+offset_top = 58.0
+offset_right = 1058.0
+offset_bottom = 344.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ltvjv")
+theme_override_font_sizes/font_size = 120
+text = "Renshu Quest"
 
 [node name="Verison Number" type="Label" parent="."]
 offset_left = 1032.0
@@ -76,6 +79,10 @@ offset_right = 442.0
 offset_bottom = 644.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "(Full Screening the application might make things blurry!)"
+
+[node name="Sword-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(577, 178)
+texture = ExtResource("4_it7nq")
 
 [connection signal="pressed" from="Control/Quit Button" to="Control/Quit Button" method="_on_pressed"]
 [connection signal="mouse_entered" from="Control/Let's Fight Button" to="Control/Quit Button" method="_on_lets_fight_button_mouse_entered"]

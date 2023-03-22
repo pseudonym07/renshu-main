@@ -1,12 +1,12 @@
 2a60927148abd1d33b818b535e306557
-::res://::1679331599
-askPname.tscn::PackedScene::2720553054770239191::1679331291::0::1::::<><>::
-battlebgmusic.tscn::PackedScene::8313095936003295031::1679326232::0::1::::<><>::uid://dav0jyj8yoaas
-BattleUI.tscn::PackedScene::7210540036962626466::1679326232::0::1::::<><>::uid://dqo6qfxly7w3h
-default_env.tres::Environment::5684361257065672036::1679331291::0::1::::<><>::
+::res://::1679503098
+askPname.tscn::PackedScene::2720553054770239191::1679332154::0::1::::<><>::uid://clh1r1t54fjr2
+battlebgmusic.tscn::PackedScene::8313095936003295031::1679332154::0::1::::<><>::uid://dav0jyj8yoaas
+BattleUI.tscn::PackedScene::7210540036962626466::1679332154::0::1::::<><>::uid://dqo6qfxly7w3h
+default_env.tres::Environment::5684361257065672036::1679334908::0::1::::<><>::
 icon.png::CompressedTexture2D::7108641680819812028::1676654152::1677699483::1::::<><>::
 Let's Fight Button.gd::GDScript::-1::1678303030::0::1::::<>Button<>::
-MainMenu.tscn::PackedScene::8695092013093964616::1679326232::0::1::::<><>::uid://hao6gvqf58vm<>res://Quit Button.gd<>uid://sgv3cqbyndb6<>uid://l1qwfpc1ma32<>res://Let's Fight Button.gd
+MainMenu.tscn::PackedScene::8695092013093964616::1679334908::0::1::::<><>::uid://hao6gvqf58vm<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd
 Quit Button.gd::GDScript::-1::1678303030::0::1::::<>Button<>::
 README.md::TextFile::-1::1677786070::0::1::::<><>::
 ::res://assets/::1679331599
