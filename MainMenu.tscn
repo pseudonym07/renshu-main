@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://dv475oyqy81gm"]
+[gd_scene load_steps=8 format=3 uid="uid://dv475oyqy81gm"]
 
+[ext_resource type="Script" path="res://MainMenu.gd" id="1_bbxj3"]
 [ext_resource type="Script" path="res://Quit Button.gd" id="2_ucdkl"]
 [ext_resource type="FontFile" uid="uid://clh1r1t54fjr2" path="res://assets/font/shent/Shenttpuro Font.ttf" id="3_ltvjv"]
 [ext_resource type="Script" path="res://Let's Fight Button.gd" id="3_rwwhb"]
@@ -10,6 +11,7 @@
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qlpcy"]
 
 [node name="MainMenu" type="Node"]
+script = ExtResource("1_bbxj3")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
