@@ -1,9 +1,4 @@
 res://default_env.tres
-res://MainMenu.tscn
 res://BattleUI.tscn
-res://battlebgmusic.tscn
 res://askPname.tscn
-res://Entry Box.gd
-res://Let's Fight Button.gd
-res://BattleUI.gd
-res://MainMenu.gd
+res://MainMenu.tscn

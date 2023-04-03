@@ -1,19 +1,23 @@
 2a60927148abd1d33b818b535e306557
-::res://::1679584882
-askPname.tscn::PackedScene::2720553054770239191::1679504697::0::1::::<><>::uid://clh1r1t54fjr2<>res://Entry Box.gd
-battlebgmusic.tscn::PackedScene::8313095936003295031::1679504246::0::1::::<><>::uid://dav0jyj8yoaas
-BattleUI.tscn::PackedScene::7210540036962626466::1679504246::0::1::::<><>::uid://dqo6qfxly7w3h
-default_env.tres::Environment::5684361257065672036::1679504697::0::1::::<><>::
-Entry Box.gd::GDScript::-1::1679504684::0::1::::<>TextEdit<>::
+::res://::1680543935
+askPname.tscn::PackedScene::2720553054770239191::1680539739::0::1::::<><>::uid://clh1r1t54fjr2<>res://Entry Box.gd
+battlebgmusic.tscn::PackedScene::8313095936003295031::1679593607::0::1::::<><>::uid://dav0jyj8yoaas
+BattleUI.gd::GDScript::-1::1679591993::0::1::::<>Control<>::
+BattleUI.tscn::PackedScene::7210540036962626466::1680543890::0::1::::<><>::res://BattleUI.gd<>uid://bxsf1hi7olgs4
+default_env.tres::Environment::5684361257065672036::1680543890::0::1::::<><>::
+Entry Box.gd::GDScript::-1::1679592634::0::1::::<>TextEdit<>::
 icon.png::CompressedTexture2D::7108641680819812028::1676654152::1677699483::1::::<><>::
-Let's Fight Button.gd::GDScript::-1::1679504051::0::1::::<>Button<>::
-MainMenu.tscn::PackedScene::8695092013093964616::1679504246::0::1::::<><>::res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
+Let's Fight Button.gd::GDScript::-1::1679590104::0::1::::<>Button<>::
+MainMenu.gd::GDScript::-1::1679591993::0::1::::<>Node<>::
+MainMenu.tscn::PackedScene::8695092013093964616::1680543890::0::1::::<><>::res://MainMenu.gd<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
 Quit Button.gd::GDScript::-1::1678303030::0::1::::<>Button<>::
 README.md::TextFile::-1::1677786070::0::1::::<><>::
-::res://assets/::1679331599
+::res://assets/::1680535299
 ::res://assets/font/::1679331596
 ::res://assets/font/shent/::1679331599
 Shenttpuro Font.ttf::FontFile::5560979688351699705::1679331570::1679331599::1::::<><>::
+::res://assets/monsters/::1680535304
+D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png::CompressedTexture2D::4038273284041250001::1680535079::1680535304::1::::<><>::
 ::res://assets/music/::1678303030
 renshu_battle_theme.wav::AudioStreamWAV::7204149256874498658::1678303030::1678303030::1::::<><>::
 ::res://assets/projectfiles4pixelart/::1677871171

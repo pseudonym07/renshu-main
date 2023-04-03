@@ -13,6 +13,7 @@ offset_bottom = 648.0
 texture = SubResource("CanvasTexture_8hdbg")
 
 [node name="Entry Box" type="TextEdit" parent="."]
+clip_contents = true
 offset_left = 414.0
 offset_top = 381.0
 offset_right = 695.0

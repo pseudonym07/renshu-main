@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://day3snk63p8hy"]
+[gd_scene load_steps=4 format=3 uid="uid://day3snk63p8hy"]
 
 [ext_resource type="Script" path="res://BattleUI.gd" id="1_fxsqs"]
+[ext_resource type="Texture2D" uid="uid://bxsf1hi7olgs4" path="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png" id="2_skg58"]
 
-[node name="BattleUI" type="Control"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_t4pbb"]
+
+[node name="Battle" type="Control"]
 layout_mode = 3
 anchor_right = 1.773
 anchor_bottom = 1.907
@@ -18,3 +21,15 @@ offset_right = 544.0
 offset_bottom = 274.0
 theme_override_font_sizes/font_size = 50
 text = "this works"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("CanvasTexture_t4pbb")
+
+[node name="D29668a8-54c9-4aac-87a9-22ca10b98da0-1" type="Sprite2D" parent="."]
+position = Vector2(320, 112)
+scale = Vector2(0.231333, 0.231333)
+texture = ExtResource("2_skg58")
+centered = false

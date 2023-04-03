@@ -1,10 +1,12 @@
+VBoxContainer
+ProgressBar
+TextureRect
 Label
 TextEdit
 Node
 AudioStreamPlayer2D
 Button
 Control
-TextureRect
 MarginContainer
 TileMap
 Sprite2D
