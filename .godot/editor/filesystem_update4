@@ -1,7 +1,2 @@
 res://default_env.tres
 res://MainMenu.tscn
-res://PlayerNamePrompt.gd
-res://BattleUI.tscn
-res://askPname.tscn
-res://MonsterHP.gd
-res://Pname Prompt.gd
