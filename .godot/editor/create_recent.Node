@@ -1,9 +1,14 @@
 VBoxContainer
+HBoxContainer
+Label
+Node
+Panel
+RichTextLabel
+ReferenceRect
+ColorRect
 ProgressBar
 TextureRect
-Label
 TextEdit
-Node
 AudioStreamPlayer2D
 Button
 Control

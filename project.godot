@@ -17,6 +17,10 @@ boot_splash/bg_color=Color(1, 1, 1, 1)
 boot_splash/image="res://assets/titles_screen_assets/sword-removebg-preview.png"
 config/icon="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png"
 
+[autoload]
+
+AskPname="*res://askPnameStore.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"

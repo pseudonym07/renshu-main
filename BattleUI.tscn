@@ -1,9 +1,42 @@
-[gd_scene load_steps=4 format=3 uid="uid://day3snk63p8hy"]
+[gd_scene load_steps=12 format=3 uid="uid://day3snk63p8hy"]
 
 [ext_resource type="Script" path="res://BattleUI.gd" id="1_fxsqs"]
 [ext_resource type="Texture2D" uid="uid://bxsf1hi7olgs4" path="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png" id="2_skg58"]
+[ext_resource type="FontFile" uid="uid://clh1r1t54fjr2" path="res://assets/font/shent/Shenttpuro Font.ttf" id="3_4ufpn"]
+[ext_resource type="Script" path="res://Pname Prompt.gd" id="3_fuqwk"]
+[ext_resource type="FontFile" uid="uid://bdcxqtawvr4wo" path="res://assets/font/skranji/Skranji-Regular.ttf" id="4_g8we0"]
+[ext_resource type="Script" path="res://MonsterHP.gd" id="4_kibpq"]
+[ext_resource type="Script" path="res://PlayerNamePrompt.gd" id="5_s0ou1"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_t4pbb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7so2l"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1it28"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 7
+
+[sub_resource type="LabelSettings" id="LabelSettings_e8yfg"]
+font = ExtResource("4_g8we0")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
 
 [node name="Battle" type="Control"]
 layout_mode = 3
@@ -13,23 +46,61 @@ offset_right = 0.447876
 offset_bottom = -0.200073
 script = ExtResource("1_fxsqs")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 464.0
-offset_top = 248.0
-offset_right = 544.0
-offset_bottom = 274.0
-theme_override_font_sizes/font_size = 50
-text = "this works"
-
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = SubResource("CanvasTexture_t4pbb")
 
-[node name="D29668a8-54c9-4aac-87a9-22ca10b98da0-1" type="Sprite2D" parent="."]
-position = Vector2(320, 112)
-scale = Vector2(0.231333, 0.231333)
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 48.0
+offset_right = 764.0
+offset_bottom = 452.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7so2l")
+
+[node name="DRGN" type="Sprite2D" parent="."]
+position = Vector2(560, 248)
+scale = Vector2(0.166667, 0.166667)
 texture = ExtResource("2_skg58")
-centered = false
+
+[node name="Pname Prompt" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 464.0
+offset_right = -890.944
+offset_bottom = 648.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1it28")
+script = ExtResource("3_fuqwk")
+
+[node name="Text" type="Label" parent="Pname Prompt"]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 40.0
+offset_right = 504.0
+offset_bottom = 126.0
+text = "Place holder Text"
+label_settings = SubResource("LabelSettings_e8yfg")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_s0ou1")
+
+[node name="MonsterHP" type="Label" parent="."]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 5.0
+offset_right = 824.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4ufpn")
+theme_override_font_sizes/font_size = 22
+text = "100/100"
+script = ExtResource("4_kibpq")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
