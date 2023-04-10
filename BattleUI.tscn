@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://day3snk63p8hy"]
+[gd_scene load_steps=13 format=3 uid="uid://day3snk63p8hy"]
 
 [ext_resource type="Script" path="res://BattleUI.gd" id="1_fxsqs"]
 [ext_resource type="Texture2D" uid="uid://bxsf1hi7olgs4" path="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png" id="2_skg58"]
@@ -7,20 +7,10 @@
 [ext_resource type="FontFile" uid="uid://bdcxqtawvr4wo" path="res://assets/font/skranji/Skranji-Regular.ttf" id="4_g8we0"]
 [ext_resource type="Script" path="res://MonsterHP.gd" id="4_kibpq"]
 [ext_resource type="Script" path="res://PlayerNamePrompt.gd" id="5_s0ou1"]
+[ext_resource type="Texture2D" uid="uid://xn028gagtlof" path="res://assets/Leo's UI Assets/PaulFrame.png" id="8_w2s8h"]
+[ext_resource type="Texture2D" uid="uid://use5602qaisk" path="res://assets/Leo's UI Assets/Untitled_50_conflictgkkg.png" id="9_2xuj3"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_t4pbb"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7so2l"]
-bg_color = Color(1, 1, 1, 0)
-border_width_left = 15
-border_width_top = 15
-border_width_right = 15
-border_width_bottom = 15
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1it28"]
 bg_color = Color(1, 1, 1, 1)
@@ -48,24 +38,17 @@ script = ExtResource("1_fxsqs")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 896.0
+offset_bottom = 644.0
 texture = SubResource("CanvasTexture_t4pbb")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 360.0
-offset_top = 48.0
-offset_right = 764.0
-offset_bottom = 452.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_7so2l")
-
 [node name="DRGN" type="Sprite2D" parent="."]
-position = Vector2(560, 248)
-scale = Vector2(0.166667, 0.166667)
+position = Vector2(440, 304)
+scale = Vector2(0.206, 0.206)
 texture = ExtResource("2_skg58")
 
 [node name="Pname Prompt" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -104,3 +87,13 @@ script = ExtResource("4_kibpq")
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="PaulFrame" type="Sprite2D" parent="."]
+position = Vector2(449.5, 324.5)
+scale = Vector2(0.431333, 0.431333)
+texture = ExtResource("8_w2s8h")
+
+[node name="Untitled50Conflictgkkg" type="Sprite2D" parent="."]
+position = Vector2(440, 392)
+scale = Vector2(0.377333, 0.377333)
+texture = ExtResource("9_2xuj3")

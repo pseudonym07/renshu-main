@@ -23,6 +23,8 @@ AskPname="*res://askPnameStore.gd"
 
 [display]
 
+window/size/viewport_width=924
+window/size/viewport_height=664
 window/stretch/mode="canvas_items"
 
 [gui]

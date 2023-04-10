@@ -1,2 +1,4 @@
 res://default_env.tres
+res://BattleUI.tscn
 res://MainMenu.tscn
+res://askPname.tscn
