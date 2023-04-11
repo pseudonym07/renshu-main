@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bln2jdedmmkeu"
-path="res://.godot/imported/Untitled_50_conflictpot.png-8f21417899b1d4ce520845019c8737db.ctex"
+uid="uid://vvwklj6itrjl"
+path="res://.godot/imported/SkillButton.png-5d4263deedaa28c002060ee3e8806bca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Leo's UI Assets/Untitled_50_conflictpot.png"
-dest_files=["res://.godot/imported/Untitled_50_conflictpot.png-8f21417899b1d4ce520845019c8737db.ctex"]
+source_file="res://assets/Leo's UI Assets/SkillButton.png"
+dest_files=["res://.godot/imported/SkillButton.png-5d4263deedaa28c002060ee3e8806bca.ctex"]
 
 [params]
 

@@ -1,5 +1,6 @@
-CenterContainer
+TextureProgressBar
 VBoxContainer
+CenterContainer
 HBoxContainer
 Label
 Node

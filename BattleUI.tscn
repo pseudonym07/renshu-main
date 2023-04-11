@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://day3snk63p8hy"]
+[gd_scene load_steps=13 format=3 uid="uid://brdgsdeeklp88"]
 
 [ext_resource type="Script" path="res://BattleUI.gd" id="1_fxsqs"]
 [ext_resource type="Texture2D" uid="uid://bxsf1hi7olgs4" path="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png" id="2_skg58"]
@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://MonsterHP.gd" id="4_kibpq"]
 [ext_resource type="Script" path="res://PlayerNamePrompt.gd" id="5_s0ou1"]
 [ext_resource type="Texture2D" uid="uid://xn028gagtlof" path="res://assets/Leo's UI Assets/PaulFrame.png" id="8_w2s8h"]
-[ext_resource type="Texture2D" uid="uid://use5602qaisk" path="res://assets/Leo's UI Assets/Untitled_50_conflictgkkg.png" id="9_2xuj3"]
+[ext_resource type="Texture2D" uid="uid://use5602qaisk" path="res://assets/Leo's UI Assets/OldHealthbar.png" id="9_51maa"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_t4pbb"]
 
@@ -42,11 +42,6 @@ offset_right = 896.0
 offset_bottom = 644.0
 texture = SubResource("CanvasTexture_t4pbb")
 
-[node name="DRGN" type="Sprite2D" parent="."]
-position = Vector2(440, 304)
-scale = Vector2(0.206, 0.206)
-texture = ExtResource("2_skg58")
-
 [node name="Pname Prompt" type="Panel" parent="."]
 visible = false
 layout_mode = 1
@@ -73,10 +68,10 @@ script = ExtResource("5_s0ou1")
 
 [node name="MonsterHP" type="Label" parent="."]
 layout_mode = 0
-offset_left = 640.0
-offset_top = 5.0
-offset_right = 824.0
-offset_bottom = 91.0
+offset_left = 547.0
+offset_top = 18.0
+offset_right = 731.0
+offset_bottom = 104.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_4ufpn")
 theme_override_font_sizes/font_size = 22
@@ -93,7 +88,18 @@ position = Vector2(449.5, 324.5)
 scale = Vector2(0.431333, 0.431333)
 texture = ExtResource("8_w2s8h")
 
-[node name="Untitled50Conflictgkkg" type="Sprite2D" parent="."]
-position = Vector2(440, 392)
-scale = Vector2(0.377333, 0.377333)
-texture = ExtResource("9_2xuj3")
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DRGN" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(440, 304)
+scale = Vector2(0.206, 0.206)
+texture = ExtResource("2_skg58")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+offset_right = 2100.0
+offset_bottom = 1500.0
+texture_over = ExtResource("9_51maa")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vvwklj6itrjl"
-path="res://.godot/imported/Untitled_50_conflict.png-9658b86cc1b5ddc219b87d43b062d105.ctex"
+uid="uid://c4bieuwamrkwl"
+path="res://.godot/imported/AttackButton.png-f8537194fb54ff5b5f7945612355d19a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Leo's UI Assets/Untitled_50_conflict.png"
-dest_files=["res://.godot/imported/Untitled_50_conflict.png-9658b86cc1b5ddc219b87d43b062d105.ctex"]
+source_file="res://assets/Leo's UI Assets/AttackButton.png"
+dest_files=["res://.godot/imported/AttackButton.png-f8537194fb54ff5b5f7945612355d19a.ctex"]
 
 [params]
 

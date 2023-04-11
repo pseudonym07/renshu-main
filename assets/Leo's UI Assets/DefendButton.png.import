@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://use5602qaisk"
-path="res://.godot/imported/Untitled_50_conflictgkkg.png-c8b1ccb61cf34d9e579645ad7cb85fe4.ctex"
+uid="uid://dgsn2lk8xs1fp"
+path="res://.godot/imported/DefendButton.png-acf8459e66760f26059944ac18351fcb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Leo's UI Assets/Untitled_50_conflictgkkg.png"
-dest_files=["res://.godot/imported/Untitled_50_conflictgkkg.png-c8b1ccb61cf34d9e579645ad7cb85fe4.ctex"]
+source_file="res://assets/Leo's UI Assets/DefendButton.png"
+dest_files=["res://.godot/imported/DefendButton.png-acf8459e66760f26059944ac18351fcb.ctex"]
 
 [params]
 
