@@ -1,16 +1,16 @@
 2a60927148abd1d33b818b535e306557
-::res://::1681233736
-askPname.tscn::PackedScene::2720553054770239191::1681148607::0::1::::<><>::uid://clh1r1t54fjr2<>res://askPnameStore.gd<>res://Entry Box.gd<>uid://bdcxqtawvr4wo
+::res://::1681407953
+askPname.tscn::PackedScene::2720553054770239191::1681407953::0::1::::<><>::uid://clh1r1t54fjr2<>res://askPnameStore.gd<>res://Entry Box.gd<>uid://bdcxqtawvr4wo
 askPnameStore.gd::GDScript::-1::1681147303::0::1::::<>Node<>::
 battlebgmusic.tscn::PackedScene::8313095936003295031::1679593607::0::1::::<><>::uid://dav0jyj8yoaas
 BattleUI.gd::GDScript::-1::1679591993::0::1::::<>Control<>::
-BattleUI.tscn::PackedScene::-1::1681233736::0::1::::<><>::
-default_env.tres::Environment::5684361257065672036::1681233736::0::1::::<><>::
+BattleUI.tscn::PackedScene::3586220768993541815::1681407953::0::1::::<><>::res://BattleUI.gd<>uid://bxsf1hi7olgs4<>uid://clh1r1t54fjr2<>res://Pname Prompt.gd<>uid://bdcxqtawvr4wo<>res://MonsterHP.gd<>res://PlayerNamePrompt.gd<>uid://xn028gagtlof<>uid://bln2jdedmmkeu
+default_env.tres::Environment::5684361257065672036::1681407953::0::1::::<><>::
 Entry Box.gd::GDScript::-1::1681147303::0::1::::<>TextEdit<>::
 icon.png::CompressedTexture2D::7108641680819812028::1676654152::1677699483::1::::<><>::
 Let's Fight Button.gd::GDScript::-1::1679590104::0::1::::<>Button<>::
 MainMenu.gd::GDScript::-1::1679591993::0::1::::<>Node<>::
-MainMenu.tscn::PackedScene::8695092013093964616::1681148607::0::1::::<><>::res://MainMenu.gd<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
+MainMenu.tscn::PackedScene::8695092013093964616::1681407953::0::1::::<><>::res://MainMenu.gd<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
 MonsterHP.gd::GDScript::-1::1681147303::0::1::::<>Label<>::
 PlayerNamePrompt.gd::GDScript::-1::1681147303::0::1::::<>Label<>::
 Pname Prompt.gd::GDScript::-1::1681147303::0::1::::<>Panel<>::
@@ -25,7 +25,7 @@ Shenttpuro Font.ttf::FontFile::5560979688351699705::1679331570::1679331599::1:::
 Skranji-Regular.ttf::FontFile::2602542032623422342::1681147303::1681147303::1::::<><>::
 ::res://assets/font/waku/::1681147303
 mini-wakuwaku.otf::FontFile::5062224528949189329::1681147303::1681147303::1::::<><>::
-::res://assets/Leo's UI Assets/::1681233736
+::res://assets/Leo's UI Assets/::1681233737
 AttackButton.png::CompressedTexture2D::6810876174230368871::1681147230::1681233689::1::::<><>::
 BackgroundDetails.png::CompressedTexture2D::3186990469366166724::1681147235::1681233720::1::::<><>::
 DefendButton.png::CompressedTexture2D::7618392044557707841::1681147228::1681233677::1::::<><>::

@@ -1,14 +1,14 @@
+Panel
+ProgressBar
 TextureProgressBar
 VBoxContainer
 CenterContainer
 HBoxContainer
 Label
 Node
-Panel
 RichTextLabel
 ReferenceRect
 ColorRect
-ProgressBar
 TextureRect
 TextEdit
 AudioStreamPlayer2D
