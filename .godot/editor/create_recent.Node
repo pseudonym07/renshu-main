@@ -1,9 +1,10 @@
 Panel
-ProgressBar
+Container
 TextureProgressBar
+HBoxContainer
+ProgressBar
 VBoxContainer
 CenterContainer
-HBoxContainer
 Label
 Node
 RichTextLabel

@@ -14,7 +14,8 @@ config/name="Renshu Quest"
 run/main_scene="res://MainMenu.tscn"
 config/features=PackedStringArray("4.0")
 boot_splash/bg_color=Color(1, 1, 1, 1)
-boot_splash/image="res://assets/titles_screen_assets/sword-removebg-preview.png"
+boot_splash/image="res://assets/titles_screen_assets/loadingscrn.png"
+boot_splash/fullsize=false
 config/icon="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png"
 
 [autoload]

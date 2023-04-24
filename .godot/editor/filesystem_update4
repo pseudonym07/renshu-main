@@ -1,4 +1,5 @@
 res://default_env.tres
-res://askPname.tscn
-res://MainMenu.tscn
 res://BattleUI.tscn
+res://MainMenu.tscn
+res://askPname.tscn
+res://ShowPlayerStats.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://brdgsdeeklp88"]
+[gd_scene load_steps=23 format=3 uid="uid://brdgsdeeklp88"]
 
 [ext_resource type="Script" path="res://BattleUI.gd" id="1_fxsqs"]
 [ext_resource type="Texture2D" uid="uid://bxsf1hi7olgs4" path="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png" id="2_skg58"]
@@ -9,6 +9,15 @@
 [ext_resource type="Script" path="res://PlayerNamePrompt.gd" id="5_s0ou1"]
 [ext_resource type="Texture2D" uid="uid://xn028gagtlof" path="res://assets/Leo's UI Assets/PaulFrame.png" id="8_w2s8h"]
 [ext_resource type="Texture2D" uid="uid://bln2jdedmmkeu" path="res://assets/Leo's UI Assets/BackgroundDetails.png" id="9_qwkly"]
+[ext_resource type="Texture2D" uid="uid://dgsn2lk8xs1fp" path="res://assets/Leo's UI Assets/DefendButton.png" id="10_83lgu"]
+[ext_resource type="Script" path="res://ActionsPanelShow.gd" id="10_o5bdw"]
+[ext_resource type="Texture2D" uid="uid://vvwklj6itrjl" path="res://assets/Leo's UI Assets/SkillButton.png" id="11_tb6q2"]
+[ext_resource type="Texture2D" uid="uid://c4bieuwamrkwl" path="res://assets/Leo's UI Assets/AttackButton.png" id="12_vc8po"]
+[ext_resource type="Script" path="res://ShowPlayerStats.gd" id="13_8q0pq"]
+[ext_resource type="Texture2D" uid="uid://dlyqwwgd0xs3r" path="res://assets/Leo's UI Assets/HealthBar.png" id="13_aoi0k"]
+[ext_resource type="Texture2D" uid="uid://chahc4iwitgej" path="res://assets/Leo's UI Assets/SpecialBar.png" id="14_u8pri"]
+[ext_resource type="Texture2D" uid="uid://cvnjx514ooegx" path="res://assets/BarAssets/health.png" id="16_xcvje"]
+[ext_resource type="Texture2D" uid="uid://ynagxwjqgpek" path="res://assets/BarAssets/special.png" id="18_phw8g"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_t4pbb"]
 
@@ -47,12 +56,12 @@ texture = SubResource("CanvasTexture_t4pbb")
 metadata/_edit_lock_ = true
 
 [node name="Pname Prompt" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_left = 2.0
 offset_top = 464.0
-offset_right = -4.0
+offset_right = -2.0
 offset_bottom = 664.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1it28")
@@ -105,7 +114,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DRGN" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(-16, 0)
+position = Vector2(-16, -19)
 scale = Vector2(0.212, 0.212)
 texture = ExtResource("2_skg58")
 
@@ -125,3 +134,57 @@ offset_top = -80.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_7tc64")
+script = ExtResource("10_o5bdw")
+
+[node name="Bars" type="Panel" parent="ActionsPanel"]
+layout_mode = 2
+offset_top = -159.0
+offset_right = 40.0
+offset_bottom = -119.0
+script = ExtResource("13_8q0pq")
+
+[node name="HealthBar" type="TextureProgressBar" parent="ActionsPanel/Bars"]
+layout_mode = 2
+offset_left = 155.0
+offset_top = -214.0
+offset_right = 2255.0
+offset_bottom = 1286.0
+scale = Vector2(0.3, 0.3)
+texture_under = ExtResource("13_aoi0k")
+texture_progress = ExtResource("16_xcvje")
+tint_under = Color(1, 0, 0, 1)
+radial_initial_angle = 48.6
+
+[node name="SpecialBar" type="TextureProgressBar" parent="ActionsPanel/Bars"]
+layout_mode = 2
+offset_left = 155.0
+offset_top = -214.0
+offset_right = 2255.0
+offset_bottom = 1286.0
+scale = Vector2(0.3, 0.3)
+texture_under = ExtResource("14_u8pri")
+texture_progress = ExtResource("18_phw8g")
+tint_under = Color(0, 0.584314, 0.584314, 1)
+
+[node name="Actions" type="HBoxContainer" parent="ActionsPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DefendButton" type="Sprite2D" parent="ActionsPanel/Actions"]
+position = Vector2(465, -9)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_83lgu")
+
+[node name="SkillButton" type="Sprite2D" parent="ActionsPanel/Actions"]
+position = Vector2(734, -11)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_tb6q2")
+
+[node name="AttackButton" type="Sprite2D" parent="ActionsPanel/Actions"]
+position = Vector2(199, -8)
+scale = Vector2(0.201333, 0.201333)
+texture = ExtResource("12_vc8po")

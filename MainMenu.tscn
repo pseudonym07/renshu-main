@@ -26,10 +26,10 @@ offset_bottom = 665.0
 texture = SubResource("CanvasTexture_0jor7")
 
 [node name="Verison Number" type="Label" parent="."]
-offset_left = 1032.0
-offset_top = 592.0
-offset_right = 1103.0
-offset_bottom = 618.0
+offset_left = 849.0
+offset_top = 637.0
+offset_right = 920.0
+offset_bottom = 663.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Ver. 0.9.4"
 

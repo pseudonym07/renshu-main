@@ -1,24 +1,29 @@
 2a60927148abd1d33b818b535e306557
-::res://::1681493135
-askPname.tscn::PackedScene::2720553054770239191::1681493051::0::1::::<><>::uid://clh1r1t54fjr2<>res://askPnameStore.gd<>res://Entry Box.gd<>uid://bdcxqtawvr4wo
+::res://::1682357235
+ActionsPanelShow.gd::GDScript::-1::1682356784::0::1::::<>Panel<>::
+askPname.tscn::PackedScene::2720553054770239191::1682357086::0::1::::<><>::uid://clh1r1t54fjr2<>res://askPnameStore.gd<>res://Entry Box.gd<>uid://bdcxqtawvr4wo
 askPnameStore.gd::GDScript::-1::1681147303::0::1::::<>Node<>::
 battlebgmusic.tscn::PackedScene::8313095936003295031::1679593607::0::1::::<><>::uid://dav0jyj8yoaas
 BattleUI.gd::GDScript::-1::1679591993::0::1::::<>Control<>::
-BattleUI.tscn::PackedScene::3586220768993541815::1681493051::0::1::::<><>::res://BattleUI.gd<>uid://bxsf1hi7olgs4<>uid://clh1r1t54fjr2<>res://Pname Prompt.gd<>uid://bdcxqtawvr4wo<>res://MonsterHP.gd<>res://PlayerNamePrompt.gd<>uid://xn028gagtlof<>uid://bln2jdedmmkeu
-default_env.tres::Environment::5684361257065672036::1681493051::0::1::::<><>::
+BattleUI.tscn::PackedScene::3586220768993541815::1682357086::0::1::::<><>::res://BattleUI.gd<>uid://bxsf1hi7olgs4<>uid://clh1r1t54fjr2<>res://Pname Prompt.gd<>uid://bdcxqtawvr4wo<>res://MonsterHP.gd<>res://PlayerNamePrompt.gd<>uid://xn028gagtlof<>uid://bln2jdedmmkeu<>uid://dgsn2lk8xs1fp<>res://ActionsPanelShow.gd<>uid://vvwklj6itrjl<>uid://c4bieuwamrkwl<>res://ShowPlayerStats.gd<>uid://dlyqwwgd0xs3r<>uid://chahc4iwitgej<>uid://cvnjx514ooegx<>uid://ynagxwjqgpek
+default_env.tres::Environment::5684361257065672036::1682357086::0::1::::<><>::
 Entry Box.gd::GDScript::-1::1681147303::0::1::::<>TextEdit<>::
 icon.png::CompressedTexture2D::7108641680819812028::1676654152::1677699483::1::::<><>::
 Let's Fight Button.gd::GDScript::-1::1679590104::0::1::::<>Button<>::
 MainMenu.gd::GDScript::-1::1679591993::0::1::::<>Node<>::
-MainMenu.tscn::PackedScene::8695092013093964616::1681493051::0::1::::<><>::res://MainMenu.gd<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
+MainMenu.tscn::PackedScene::8695092013093964616::1682357086::0::1::::<><>::res://MainMenu.gd<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
 MonsterHP.gd::GDScript::-1::1681147303::0::1::::<>Label<>::
 PlayerHP.gd::GDScript::-1::1681408340::0::1::::<>Label<>::
-PlayerNamePrompt.gd::GDScript::-1::1681492866::0::1::::<>Label<>::
+PlayerNamePrompt.gd::GDScript::-1::1682356673::0::1::::<>Label<>::
 Pname Prompt.gd::GDScript::-1::1681147303::0::1::::<>Panel<>::
 Quit Button.gd::GDScript::-1::1678303030::0::1::::<>Button<>::
 README.md::TextFile::-1::1677786070::0::1::::<><>::
 ShapingRect.gd::GDScript::-1::1681147303::0::1::::<>ReferenceRect<>::
-::res://assets/::1681147322
+ShowPlayerStats.gd::GDScript::-1::1682356524::0::1::::<>Container<>::
+::res://assets/::1682355418
+::res://assets/BarAssets/::1682355471
+health.png::CompressedTexture2D::6274233137984680291::1682355426::1682355431::1::::<><>::
+special.png::CompressedTexture2D::1711381115332287646::1682355467::1682355471::1::::<><>::
 ::res://assets/font/::1681147303
 ::res://assets/font/shent/::1679331599
 Shenttpuro Font.ttf::FontFile::5560979688351699705::1679331570::1679331599::1::::<><>::
@@ -26,23 +31,26 @@ Shenttpuro Font.ttf::FontFile::5560979688351699705::1679331570::1679331599::1:::
 Skranji-Regular.ttf::FontFile::2602542032623422342::1681147303::1681147303::1::::<><>::
 ::res://assets/font/waku/::1681147303
 mini-wakuwaku.otf::FontFile::5062224528949189329::1681147303::1681147303::1::::<><>::
-::res://assets/Leo's UI Assets/::1681233737
+::res://assets/Leo's UI Assets/::1682354464
 AttackButton.png::CompressedTexture2D::6810876174230368871::1681147230::1681233689::1::::<><>::
 BackgroundDetails.png::CompressedTexture2D::3186990469366166724::1681147235::1681233720::1::::<><>::
 DefendButton.png::CompressedTexture2D::7618392044557707841::1681147228::1681233677::1::::<><>::
+HealthBar.png::CompressedTexture2D::7981896321498435257::1682354336::1682354464::1::::<><>::
 OldHealthbar.png::CompressedTexture2D::1441233782214048942::1681147233::1681233737::1::::<><>::
 PaulFrame.png::CompressedTexture2D::1642748198280274949::1681147224::1681147561::1::::<><>::
 SkillButton.png::CompressedTexture2D::1518671874093893433::1681147226::1681233647::1::::<><>::
+SpecialBar.png::CompressedTexture2D::5264593399936217217::1682354334::1682354464::1::::<><>::
 ::res://assets/monsters/::1680535304
 D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png::CompressedTexture2D::4038273284041250001::1680535079::1680535304::1::::<><>::
 ::res://assets/music/::1678303030
 renshu_battle_theme.wav::AudioStreamWAV::7204149256874498658::1678303030::1678303030::1::::<><>::
 ::res://assets/projectfiles4pixelart/::1677871171
 bgtile.png::CompressedTexture2D::1556428629049370982::1676662054::1677871171::1::::<><>::
-::res://assets/titles_screen_assets/::1678304390
+::res://assets/titles_screen_assets/::1682353525
 arrow-removebg-preview.png::CompressedTexture2D::1298051673093951686::1678209853::1678209853::1::::<><>::
 fightFight.png::CompressedTexture2D::5117073168896235407::1678304362::1678304390::1::::<><>::
 letsfightbutton.png::CompressedTexture2D::1277110640927967317::1678129925::1678130225::1::::<><>::
+loadingscrn.png::CompressedTexture2D::7477318772713603392::1682353347::1682353525::1::::<><>::
 quitbutton.png::CompressedTexture2D::826762146888986707::1678130009::1678130225::1::::<><>::
 renshutitle.png::CompressedTexture2D::492227651291869018::1678129528::1678130225::1::::<><>::
 sns.png::CompressedTexture2D::8190436885477968695::1678213901::1678213957::1::::<><>::
