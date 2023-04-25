@@ -1,8 +1,9 @@
+ProgressBar
+TextureProgressBar
+TextureButton
 Panel
 Container
-TextureProgressBar
 HBoxContainer
-ProgressBar
 VBoxContainer
 CenterContainer
 Label

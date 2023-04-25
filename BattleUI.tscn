@@ -12,12 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://dgsn2lk8xs1fp" path="res://assets/Leo's UI Assets/DefendButton.png" id="10_83lgu"]
 [ext_resource type="Script" path="res://ActionsPanelShow.gd" id="10_o5bdw"]
 [ext_resource type="Texture2D" uid="uid://vvwklj6itrjl" path="res://assets/Leo's UI Assets/SkillButton.png" id="11_tb6q2"]
+[ext_resource type="FontFile" uid="uid://6lhakyrsc2d" path="res://assets/font/sketchy/sketchy/sketchy.ttf" id="12_alcyp"]
 [ext_resource type="Texture2D" uid="uid://c4bieuwamrkwl" path="res://assets/Leo's UI Assets/AttackButton.png" id="12_vc8po"]
 [ext_resource type="Script" path="res://ShowPlayerStats.gd" id="13_8q0pq"]
-[ext_resource type="Texture2D" uid="uid://dlyqwwgd0xs3r" path="res://assets/Leo's UI Assets/HealthBar.png" id="13_aoi0k"]
-[ext_resource type="Texture2D" uid="uid://chahc4iwitgej" path="res://assets/Leo's UI Assets/SpecialBar.png" id="14_u8pri"]
-[ext_resource type="Texture2D" uid="uid://cvnjx514ooegx" path="res://assets/BarAssets/health.png" id="16_xcvje"]
-[ext_resource type="Texture2D" uid="uid://ynagxwjqgpek" path="res://assets/BarAssets/special.png" id="18_phw8g"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_t4pbb"]
 
@@ -39,6 +36,12 @@ outline_size = 1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tc64"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysxi0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_si81n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pfr6"]
+
 [node name="Battle" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -56,6 +59,7 @@ texture = SubResource("CanvasTexture_t4pbb")
 metadata/_edit_lock_ = true
 
 [node name="Pname Prompt" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -68,6 +72,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_1it28")
 script = ExtResource("3_fuqwk")
 
 [node name="Text For prompt" type="Label" parent="Pname Prompt"]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -137,34 +142,57 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_7tc64")
 script = ExtResource("10_o5bdw")
 
 [node name="Bars" type="Panel" parent="ActionsPanel"]
-layout_mode = 2
-offset_top = -159.0
-offset_right = 40.0
-offset_bottom = -119.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -210.0
+offset_bottom = -164.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ysxi0")
 script = ExtResource("13_8q0pq")
 
-[node name="HealthBar" type="TextureProgressBar" parent="ActionsPanel/Bars"]
-layout_mode = 2
-offset_left = 155.0
-offset_top = -214.0
-offset_right = 2255.0
-offset_bottom = 1286.0
-scale = Vector2(0.3, 0.3)
-texture_under = ExtResource("13_aoi0k")
-texture_progress = ExtResource("16_xcvje")
-tint_under = Color(1, 0, 0, 1)
-radial_initial_angle = 48.6
+[node name="HealthPercent" type="ProgressBar" parent="ActionsPanel/Bars"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -25.0
+offset_right = -77.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.794399, 3.22476e-06, 9.62615e-07, 1)
+theme_override_fonts/font = ExtResource("12_alcyp")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/background = SubResource("StyleBoxEmpty_si81n")
+theme_override_styles/fill = SubResource("StyleBoxEmpty_4pfr6")
+value = 100.0
 
-[node name="SpecialBar" type="TextureProgressBar" parent="ActionsPanel/Bars"]
-layout_mode = 2
-offset_left = 155.0
-offset_top = -214.0
-offset_right = 2255.0
-offset_bottom = 1286.0
-scale = Vector2(0.3, 0.3)
-texture_under = ExtResource("14_u8pri")
-texture_progress = ExtResource("18_phw8g")
-tint_under = Color(0, 0.584314, 0.584314, 1)
+[node name="MagicPercent" type="ProgressBar" parent="ActionsPanel/Bars"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 73.0
+offset_top = -28.0
+offset_right = 201.0
+offset_bottom = 66.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.557222, 0.557222, 1)
+theme_override_fonts/font = ExtResource("12_alcyp")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/background = SubResource("StyleBoxEmpty_si81n")
+theme_override_styles/fill = SubResource("StyleBoxEmpty_4pfr6")
+value = 100.0
 
 [node name="Actions" type="HBoxContainer" parent="ActionsPanel"]
 layout_mode = 1
