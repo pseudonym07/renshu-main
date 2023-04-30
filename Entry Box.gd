@@ -16,5 +16,5 @@ func _process(delta):
 func _input(event):
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_ENTER:
-			get_tree().change_scene_to_file("res://BattleUI.tscn")
+			get_tree().change_scene_to_file("res://Battle.tscn")
 			print(input)

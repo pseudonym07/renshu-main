@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://c8o8ech851o5"]
+
+[ext_resource type="Script" path="res://CloseGame.gd" id="1_7x41a"]
+[ext_resource type="FontFile" uid="uid://bdcxqtawvr4wo" path="res://assets/font/skranji/Skranji-Regular.ttf" id="2_350w2"]
+[ext_resource type="FontFile" uid="uid://ceegdl0gfbikf" path="res://assets/font/waku/mini-wakuwaku.otf" id="3_jxlwk"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_nyx1i"]
+
+[node name="GameOver" type="Node"]
+script = ExtResource("1_7x41a")
+
+[node name="White BG" type="TextureRect" parent="."]
+offset_right = 924.0
+offset_bottom = 664.0
+texture = SubResource("CanvasTexture_nyx1i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="White BG"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_350w2")
+theme_override_font_sizes/font_size = 78
+text = "Game Over!"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="White BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.505952
+anchor_top = 0.483434
+anchor_right = 0.513528
+anchor_bottom = 0.591867
+offset_left = -171.5
+offset_top = 69.0
+offset_right = 171.5
+offset_bottom = 177.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_jxlwk")
+theme_override_font_sizes/font_size = 32
+text = "					You lose...
+
+Thanks for playing!
+
+Try again next time."
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="White BG"]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 640.0
+offset_right = 689.0
+offset_bottom = 666.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "(Press the Escape Key on your keyboard to close the game.)"
+metadata/_edit_use_anchors_ = true

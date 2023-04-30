@@ -1,4 +1,10 @@
 res://default_env.tres
 res://MainMenu.tscn
-res://BattleUI.tscn
+res://Battle.gd
+res://DRGN.tres
 res://askPname.tscn
+res://Battle.tscn
+res://BaseEnemy.gd
+res://VictoryScn.tscn
+res://CloseGame.gd
+res://GameOver.tscn

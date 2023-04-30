@@ -21,6 +21,8 @@ config/icon="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png"
 [autoload]
 
 AskPname="*res://askPnameStore.gd"
+SystemText="*res://SystemText.gd"
+State="*res://PlayerState.gd"
 
 [display]
 

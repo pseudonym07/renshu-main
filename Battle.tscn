@@ -1,0 +1,518 @@
+[gd_scene load_steps=43 format=3 uid="uid://lj1sieruqsw1"]
+
+[ext_resource type="Script" path="res://Battle.gd" id="1_fx4xk"]
+[ext_resource type="Script" path="res://Pname Prompt.gd" id="2_bgaux"]
+[ext_resource type="Resource" uid="uid://d0s2ecut67wlr" path="res://DRGN.tres" id="2_udh1e"]
+[ext_resource type="FontFile" uid="uid://bdcxqtawvr4wo" path="res://assets/font/skranji/Skranji-Regular.ttf" id="3_qrmjw"]
+[ext_resource type="Script" path="res://PlayerNamePrompt.gd" id="4_wf5bx"]
+[ext_resource type="Texture2D" uid="uid://xn028gagtlof" path="res://assets/Leo's UI Assets/PaulFrame.png" id="5_tvdxy"]
+[ext_resource type="Texture2D" uid="uid://bxsf1hi7olgs4" path="res://assets/monsters/D29668A8-54C9-4AAC-87A9-22CA10B98DA0-1.png" id="6_jmmvf"]
+[ext_resource type="Texture2D" uid="uid://bln2jdedmmkeu" path="res://assets/Leo's UI Assets/BackgroundDetails.png" id="7_q8u0h"]
+[ext_resource type="Script" path="res://ActionsPanelShow.gd" id="8_a7q28"]
+[ext_resource type="Script" path="res://ShowPlayerStats.gd" id="9_gdtvr"]
+[ext_resource type="FontFile" uid="uid://6lhakyrsc2d" path="res://assets/font/sketchy/sketchy/sketchy.ttf" id="10_51chv"]
+[ext_resource type="Script" path="res://PlayerHPLabel.gd" id="11_fguje"]
+[ext_resource type="Script" path="res://PlayerSPLabel.gd" id="12_kjnpe"]
+[ext_resource type="Texture2D" uid="uid://c4bieuwamrkwl" path="res://assets/Leo's UI Assets/AttackButton.png" id="13_h6h15"]
+[ext_resource type="Script" path="res://AttackButton.gd" id="14_jgktg"]
+[ext_resource type="Texture2D" uid="uid://dgsn2lk8xs1fp" path="res://assets/Leo's UI Assets/DefendButton.png" id="15_yhqsd"]
+[ext_resource type="Script" path="res://DefendButton.gd" id="16_ktyiy"]
+[ext_resource type="Texture2D" uid="uid://vvwklj6itrjl" path="res://assets/Leo's UI Assets/SkillButton.png" id="17_knpax"]
+[ext_resource type="Script" path="res://SkillButton.gd" id="18_wqs44"]
+[ext_resource type="Script" path="res://DRGN Name.gd" id="19_w3j0c"]
+[ext_resource type="FontFile" uid="uid://clh1r1t54fjr2" path="res://assets/font/shent/Shenttpuro Font.ttf" id="20_hmi1h"]
+[ext_resource type="Script" path="res://MonsterHP.gd" id="21_5fypw"]
+[ext_resource type="Script" path="res://SystemText.gd" id="22_i47hx"]
+[ext_resource type="Texture2D" uid="uid://sq1yr7hwp6ic" path="res://assets/titles_screen_assets/arrow-removebg-preview.png" id="23_tu1ky"]
+[ext_resource type="Script" path="res://MenuArrow1.gd" id="24_7gg25"]
+[ext_resource type="Script" path="res://MenuArrow2.gd" id="25_d8twh"]
+[ext_resource type="Script" path="res://MenuArrow3.gd" id="26_80gtf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_umys6"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t4pbb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1it28"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 7
+
+[sub_resource type="LabelSettings" id="LabelSettings_e8yfg"]
+font = ExtResource("3_qrmjw")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tc64"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysxi0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_si81n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pfr6"]
+
+[sub_resource type="Animation" id="Animation_uo24n"]
+resource_name = "enemy_damaged"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/DRGN:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_un7lk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/DRGN:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ehm0l"]
+resource_name = "screen_shake"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, -7), Vector2(8, 8), Vector2(5, -6), Vector2(5, -4), Vector2(-7, -5), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uroci"]
+resource_name = "defend"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-6, 0), Vector2(6, 0), Vector2(-6, 0), Vector2(6, 0), Vector2(-6, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1lxjg"]
+resource_name = "enemy_death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/DRGN:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_blll6"]
+resource_name = "player_death"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kc4to"]
+_data = {
+"RESET": SubResource("Animation_un7lk"),
+"defend": SubResource("Animation_uroci"),
+"enemy_damaged": SubResource("Animation_uo24n"),
+"enemy_death": SubResource("Animation_1lxjg"),
+"player_death": SubResource("Animation_blll6"),
+"screen_shake": SubResource("Animation_ehm0l")
+}
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fx4xk")
+enemy = ExtResource("2_udh1e")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 167.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_umys6")
+metadata/_edit_lock_ = true
+
+[node name="Background color" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 924.0
+offset_bottom = 664.0
+texture = SubResource("CanvasTexture_t4pbb")
+metadata/_edit_lock_ = true
+
+[node name="Pname Prompt" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 465.0
+offset_right = -3.0
+offset_bottom = 665.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1it28")
+script = ExtResource("2_bgaux")
+metadata/_edit_lock_ = true
+
+[node name="TicMark" type="Label" parent="Pname Prompt"]
+layout_mode = 0
+offset_left = 683.0
+offset_top = 105.0
+offset_right = 1009.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 62
+text = "Enter >"
+metadata/_edit_lock_ = true
+
+[node name="Text For prompt" type="Label" parent="Pname Prompt"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.5
+offset_top = -43.0
+offset_right = 199.5
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Place Holder text"
+label_settings = SubResource("LabelSettings_e8yfg")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_wf5bx")
+metadata/_edit_lock_ = true
+
+[node name="BookFrame" type="Sprite2D" parent="."]
+position = Vector2(460.7, 332.5)
+scale = Vector2(0.442, 0.442)
+texture = ExtResource("5_tvdxy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DRGN" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(-16, -19)
+scale = Vector2(0.212, 0.212)
+texture = ExtResource("6_jmmvf")
+metadata/_edit_lock_ = true
+
+[node name="BackgroundDetails" type="Sprite2D" parent="."]
+position = Vector2(463.3, 332.5)
+scale = Vector2(0.439714, 0.442)
+texture = ExtResource("7_q8u0h")
+metadata/_edit_lock_ = true
+
+[node name="ActionsPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7tc64")
+script = ExtResource("8_a7q28")
+metadata/_edit_lock_ = true
+
+[node name="Bars" type="Panel" parent="ActionsPanel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -210.0
+offset_bottom = -164.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ysxi0")
+script = ExtResource("9_gdtvr")
+metadata/_edit_lock_ = true
+
+[node name="HealthPercent" type="ProgressBar" parent="ActionsPanel/Bars"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 134.0
+offset_top = -65.0
+offset_right = 253.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.796078, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_51chv")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/background = SubResource("StyleBoxEmpty_si81n")
+theme_override_styles/fill = SubResource("StyleBoxEmpty_4pfr6")
+value = 100.0
+show_percentage = false
+
+[node name="Health Label" type="Label" parent="ActionsPanel/Bars/HealthPercent"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 17.0
+offset_right = 158.0
+offset_bottom = 72.0
+theme_override_colors/font_color = Color(0.796078, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_51chv")
+theme_override_font_sizes/font_size = 43
+text = "95/100"
+
+[node name="MagicPercent" type="ProgressBar" parent="ActionsPanel/Bars"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 174.0
+offset_top = -35.0
+offset_right = 302.0
+offset_bottom = 59.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.556863, 0.556863, 1)
+theme_override_fonts/font = ExtResource("10_51chv")
+theme_override_font_sizes/font_size = 43
+theme_override_styles/background = SubResource("StyleBoxEmpty_si81n")
+theme_override_styles/fill = SubResource("StyleBoxEmpty_4pfr6")
+value = 100.0
+show_percentage = false
+metadata/_edit_lock_ = true
+
+[node name="MagicLabel" type="Label" parent="ActionsPanel/Bars/MagicPercent"]
+layout_mode = 0
+offset_left = -26.0
+offset_top = 22.0
+offset_right = 117.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0, 0.556863, 0.556863, 1)
+theme_override_fonts/font = ExtResource("10_51chv")
+theme_override_font_sizes/font_size = 43
+text = "95/100"
+
+[node name="PlayerHPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 101.5
+offset_top = 106.5
+offset_right = 144.5
+offset_bottom = 151.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 30
+text = "HP:"
+script = ExtResource("11_fguje")
+metadata/_edit_lock_ = true
+
+[node name="PlayerSPLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 108.0
+offset_top = 140.0
+offset_right = 145.0
+offset_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 30
+text = "SP:"
+script = ExtResource("12_kjnpe")
+metadata/_edit_lock_ = true
+
+[node name="AttackButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 2
+offset_left = -16.0
+offset_top = 416.0
+offset_right = 2084.0
+offset_bottom = 1916.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("13_h6h15")
+script = ExtResource("14_jgktg")
+metadata/_edit_lock_ = true
+
+[node name="DefendButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 248.0
+offset_top = 412.0
+offset_right = 2348.0
+offset_bottom = 1912.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("15_yhqsd")
+script = ExtResource("16_ktyiy")
+metadata/_edit_lock_ = true
+
+[node name="SkillButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 2
+offset_left = 528.0
+offset_top = 412.0
+offset_right = 2628.0
+offset_bottom = 1912.0
+scale = Vector2(0.2, 0.2)
+action_mode = 0
+texture_normal = ExtResource("17_knpax")
+script = ExtResource("18_wqs44")
+metadata/_edit_lock_ = true
+
+[node name="DRGN Name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 80.0
+offset_right = 551.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 22
+text = "The Sketch Dragon"
+script = ExtResource("19_w3j0c")
+metadata/_edit_lock_ = true
+
+[node name="AttackArrow(3)" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(186, 632)
+rotation = -1.57079
+texture = ExtResource("23_tu1ky")
+script = ExtResource("26_80gtf")
+
+[node name="DefenseArrow(2)" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(459, 632)
+rotation = -1.57079
+texture = ExtResource("23_tu1ky")
+script = ExtResource("25_d8twh")
+
+[node name="SkillArrow(1)" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(736, 632)
+rotation = -1.57079
+texture = ExtResource("23_tu1ky")
+script = ExtResource("24_7gg25")
+
+[node name="SystemText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.0
+offset_top = 145.0
+offset_right = -45.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 19
+script = ExtResource("22_i47hx")
+
+[node name="MonsterHPContainer" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="Health Label" type="Label" parent="MonsterHPContainer"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 104.0
+offset_right = 592.0
+offset_bottom = 190.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("20_hmi1h")
+theme_override_font_sizes/font_size = 22
+text = "95/100"
+script = ExtResource("21_5fypw")
+
+[node name="AnimPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kc4to")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="mouse_entered" from="AttackButton" to="AttackArrow(3)" method="_on_attack_button_mouse_entered"]
+[connection signal="mouse_exited" from="AttackButton" to="AttackArrow(3)" method="_on_attack_button_mouse_exited"]
+[connection signal="pressed" from="AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="mouse_entered" from="DefendButton" to="DefenseArrow(2)" method="_on_defend_button_mouse_entered"]
+[connection signal="mouse_exited" from="DefendButton" to="DefenseArrow(2)" method="_on_defend_button_mouse_exited"]
+[connection signal="pressed" from="DefendButton" to="." method="_on_defend_button_pressed"]
+[connection signal="mouse_entered" from="SkillButton" to="SkillArrow(1)" method="_on_skill_button_mouse_entered"]
+[connection signal="mouse_exited" from="SkillButton" to="SkillArrow(1)" method="_on_skill_button_mouse_exited"]
+[connection signal="pressed" from="SkillButton" to="." method="_on_skill_button_pressed"]
