@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://lj1sieruqsw1"]
+[gd_scene load_steps=45 format=3 uid="uid://lj1sieruqsw1"]
 
 [ext_resource type="Script" path="res://Battle.gd" id="1_fx4xk"]
 [ext_resource type="Script" path="res://Pname Prompt.gd" id="2_bgaux"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" path="res://MenuArrow1.gd" id="24_7gg25"]
 [ext_resource type="Script" path="res://MenuArrow2.gd" id="25_d8twh"]
 [ext_resource type="Script" path="res://MenuArrow3.gd" id="26_80gtf"]
+[ext_resource type="Script" path="res://SkillsMenu.gd" id="28_4mc6d"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_umys6"]
 
@@ -56,22 +57,6 @@ outline_size = 1
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pfr6"]
 
-[sub_resource type="Animation" id="Animation_uo24n"]
-resource_name = "enemy_damaged"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("VBoxContainer/DRGN:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_un7lk"]
 length = 0.001
 tracks/0/type = "value"
@@ -99,22 +84,6 @@ tracks/1/keys = {
 "values": [Vector2(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_ehm0l"]
-resource_name = "screen_shake"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Camera2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(-7, -7), Vector2(8, 8), Vector2(5, -6), Vector2(5, -4), Vector2(-7, -5), Vector2(0, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_uroci"]
 resource_name = "defend"
 length = 0.5
@@ -129,6 +98,22 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(-6, 0), Vector2(6, 0), Vector2(-6, 0), Vector2(6, 0), Vector2(-6, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_uo24n"]
+resource_name = "enemy_damaged"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/DRGN:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_1lxjg"]
@@ -149,6 +134,22 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_blll6"]
 resource_name = "player_death"
 
+[sub_resource type="Animation" id="Animation_ehm0l"]
+resource_name = "screen_shake"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, -7), Vector2(8, 8), Vector2(5, -6), Vector2(5, -4), Vector2(-7, -5), Vector2(0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kc4to"]
 _data = {
 "RESET": SubResource("Animation_un7lk"),
@@ -158,6 +159,8 @@ _data = {
 "player_death": SubResource("Animation_blll6"),
 "screen_shake": SubResource("Animation_ehm0l")
 }
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jmjug"]
 
 [node name="Battle" type="Control"]
 layout_mode = 3
@@ -174,18 +177,46 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 167.0
-offset_bottom = 120.0
+offset_left = -272.0
+offset_top = -232.0
+offset_right = 362.0
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CanvasTexture_umys6")
-metadata/_edit_lock_ = true
 
 [node name="Background color" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 924.0
 offset_bottom = 664.0
 texture = SubResource("CanvasTexture_t4pbb")
+metadata/_edit_lock_ = true
+
+[node name="BookFrame" type="Sprite2D" parent="."]
+position = Vector2(460.7, 332.5)
+scale = Vector2(0.442, 0.442)
+texture = ExtResource("5_tvdxy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DRGN" type="Sprite2D" parent="VBoxContainer"]
+position = Vector2(-16, -19)
+scale = Vector2(0.212, 0.212)
+texture = ExtResource("6_jmmvf")
+metadata/_edit_lock_ = true
+
+[node name="BackgroundDetails" type="Sprite2D" parent="."]
+position = Vector2(463.3, 332.5)
+scale = Vector2(0.439714, 0.442)
+texture = ExtResource("7_q8u0h")
 metadata/_edit_lock_ = true
 
 [node name="Pname Prompt" type="Panel" parent="."]
@@ -199,7 +230,6 @@ offset_bottom = 665.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_1it28")
 script = ExtResource("2_bgaux")
-metadata/_edit_lock_ = true
 
 [node name="TicMark" type="Label" parent="Pname Prompt"]
 layout_mode = 0
@@ -232,33 +262,6 @@ label_settings = SubResource("LabelSettings_e8yfg")
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("4_wf5bx")
-metadata/_edit_lock_ = true
-
-[node name="BookFrame" type="Sprite2D" parent="."]
-position = Vector2(460.7, 332.5)
-scale = Vector2(0.442, 0.442)
-texture = ExtResource("5_tvdxy")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="DRGN" type="Sprite2D" parent="VBoxContainer"]
-position = Vector2(-16, -19)
-scale = Vector2(0.212, 0.212)
-texture = ExtResource("6_jmmvf")
-metadata/_edit_lock_ = true
-
-[node name="BackgroundDetails" type="Sprite2D" parent="."]
-position = Vector2(463.3, 332.5)
-scale = Vector2(0.439714, 0.442)
-texture = ExtResource("7_q8u0h")
 metadata/_edit_lock_ = true
 
 [node name="ActionsPanel" type="Panel" parent="."]
@@ -486,6 +489,7 @@ script = ExtResource("22_i47hx")
 layout_mode = 0
 offset_right = 4.0
 offset_bottom = 27.0
+max_value = 250.0
 
 [node name="Health Label" type="Label" parent="MonsterHPContainer"]
 layout_mode = 0
@@ -507,6 +511,112 @@ libraries = {
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
+[node name="SkillsMenu" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 1.0
+offset_top = 465.0
+offset_right = -3.0
+offset_bottom = 665.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1it28")
+script = ExtResource("28_4mc6d")
+metadata/_edit_lock_ = true
+
+[node name="Skill 1" type="Button" parent="SkillsMenu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -27.5
+offset_right = 291.0
+offset_bottom = 27.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.995592, 0, 0.176305, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.995592, 0, 0.176305, 1)
+theme_override_colors/font_outline_color = Color(0.996078, 0, 0.176471, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jmjug")
+text = "Spirit Riser (DMG↑)"
+flat = true
+alignment = 0
+
+[node name="Skill 2" type="Button" parent="SkillsMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -127.5
+offset_top = -29.0
+offset_right = 127.5
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.254902, 0.4, 0.960784, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.254902, 0.4, 0.960784, 1)
+theme_override_colors/font_outline_color = Color(0.254902, 0.4, 0.960784, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jmjug")
+text = "Soul Riser (DEF↑)"
+flat = true
+alignment = 0
+
+[node name="Skill 3" type="Button" parent="SkillsMenu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -27.5
+offset_bottom = 27.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.259138, 0.610458, 0.486933, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.259138, 0.610458, 0.486933, 1)
+theme_override_colors/font_outline_color = Color(0.259138, 0.610458, 0.486933, 1)
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_qrmjw")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jmjug")
+text = "Vitality Riser (HP↑)"
+flat = true
+alignment = 0
+
 [connection signal="mouse_entered" from="AttackButton" to="AttackArrow(3)" method="_on_attack_button_mouse_entered"]
 [connection signal="mouse_exited" from="AttackButton" to="AttackArrow(3)" method="_on_attack_button_mouse_exited"]
 [connection signal="pressed" from="AttackButton" to="." method="_on_attack_button_pressed"]
@@ -516,3 +626,6 @@ anchor_mode = 0
 [connection signal="mouse_entered" from="SkillButton" to="SkillArrow(1)" method="_on_skill_button_mouse_entered"]
 [connection signal="mouse_exited" from="SkillButton" to="SkillArrow(1)" method="_on_skill_button_mouse_exited"]
 [connection signal="pressed" from="SkillButton" to="." method="_on_skill_button_pressed"]
+[connection signal="pressed" from="SkillsMenu/Skill 1" to="." method="_on_skill_1_pressed"]
+[connection signal="pressed" from="SkillsMenu/Skill 2" to="." method="_on_skill_2_pressed"]
+[connection signal="pressed" from="SkillsMenu/Skill 3" to="." method="_on_skill_3_pressed"]

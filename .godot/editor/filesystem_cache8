@@ -1,38 +1,43 @@
 2a60927148abd1d33b818b535e306557
-::res://::1682861087
+::res://::1682979532
 ActionsPanelShow.gd::GDScript::-1::1682652717::0::1::::<>Panel<>::
-askPname.tscn::PackedScene::2720553054770239191::1682861065::0::1::::<><>::uid://clh1r1t54fjr2<>res://askPnameStore.gd<>res://Entry Box.gd<>uid://bdcxqtawvr4wo
+askPname.tscn::PackedScene::2720553054770239191::1682979506::0::1::::<><>::uid://clh1r1t54fjr2<>res://askPnameStore.gd<>res://Entry Box.gd<>uid://bdcxqtawvr4wo
 askPnameStore.gd::GDScript::-1::1682652717::0::1::::<>Node<>::
 AttackButton.gd::GDScript::-1::1682846844::0::1::::<>TextureButton<>::
-BaseEnemy.gd::GDScript::-1::1682857685::0::1::::<>Resource<>::
-Battle.gd::GDScript::-1::1682860970::0::1::::<>Control<>::
-Battle.tscn::PackedScene::792267893072908590::1682861065::0::1::::<><>::res://Battle.gd<>res://Pname Prompt.gd<>uid://d0s2ecut67wlr<>uid://bdcxqtawvr4wo<>res://PlayerNamePrompt.gd<>uid://xn028gagtlof<>uid://bxsf1hi7olgs4<>uid://bln2jdedmmkeu<>res://ActionsPanelShow.gd<>res://ShowPlayerStats.gd<>uid://6lhakyrsc2d<>res://PlayerHPLabel.gd<>res://PlayerSPLabel.gd<>uid://c4bieuwamrkwl<>res://AttackButton.gd<>uid://dgsn2lk8xs1fp<>res://DefendButton.gd<>uid://vvwklj6itrjl<>res://SkillButton.gd<>res://DRGN Name.gd<>uid://clh1r1t54fjr2<>res://MonsterHP.gd<>res://SystemText.gd<>uid://sq1yr7hwp6ic<>res://MenuArrow1.gd<>res://MenuArrow2.gd<>res://MenuArrow3.gd
+BaseEnemy.gd::GDScript::-1::1682979176::0::1::::<>Resource<>::
+Battle.gd::GDScript::-1::1682979176::0::1::::<>Control<>::
+Battle.tscn::PackedScene::792267893072908590::1682979506::0::1::::<><>::res://Battle.gd<>res://Pname Prompt.gd<>uid://d0s2ecut67wlr<>uid://bdcxqtawvr4wo<>res://PlayerNamePrompt.gd<>uid://xn028gagtlof<>uid://bxsf1hi7olgs4<>uid://bln2jdedmmkeu<>res://ActionsPanelShow.gd<>res://ShowPlayerStats.gd<>uid://6lhakyrsc2d<>res://PlayerHPLabel.gd<>res://PlayerSPLabel.gd<>uid://c4bieuwamrkwl<>res://AttackButton.gd<>uid://dgsn2lk8xs1fp<>res://DefendButton.gd<>uid://vvwklj6itrjl<>res://SkillButton.gd<>res://DRGN Name.gd<>uid://clh1r1t54fjr2<>res://MonsterHP.gd<>res://SystemText.gd<>uid://sq1yr7hwp6ic<>res://MenuArrow1.gd<>res://MenuArrow2.gd<>res://MenuArrow3.gd<>res://SkillsMenu.gd
 battlebgmusic.tscn::PackedScene::8313095936003295031::1682652717::0::1::::<><>::uid://dav0jyj8yoaas
-default_env.tres::Environment::5684361257065672036::1682861065::0::1::::<><>::
+CloseGame.gd::GDScript::-1::1682889834::0::1::::<>Node<>::
+default_env.tres::Environment::5684361257065672036::1682979506::0::1::::<><>::
 DefendButton.gd::GDScript::-1::1682846845::0::1::::<>TextureButton<>::
 DRGN Name.gd::GDScript::-1::1682822672::0::1::::<>Label<>::
-DRGN.tres::Resource::8952788580432274479::1682857685::0::1::::<><>::res://BaseEnemy.gd<>uid://bxsf1hi7olgs4
+DRGN.tres::Resource::8952788580432274479::1682972847::0::1::::<><>::res://BaseEnemy.gd<>uid://bxsf1hi7olgs4
 Entry Box.gd::GDScript::-1::1682824543::0::1::::<>TextEdit<>::
+export_presets.cfg::TextFile::-1::1682897836::0::1::::<><>::
+GameOver.tscn::PackedScene::209411335803995586::1682979506::0::1::::<><>::res://CloseGame.gd<>uid://bdcxqtawvr4wo<>uid://ceegdl0gfbikf
 icon.png::CompressedTexture2D::7108641680819812028::1682652717::1682652717::1::::<><>::
 Let's Fight Button.gd::GDScript::-1::1682652717::0::1::::<>Button<>::
 MainMenu.gd::GDScript::-1::1682652717::0::1::::<>Node<>::
-MainMenu.tscn::PackedScene::8695092013093964616::1682861065::0::1::::<><>::res://MainMenu.gd<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
+MainMenu.tscn::PackedScene::8695092013093964616::1682979506::0::1::::<><>::res://MainMenu.gd<>res://Quit Button.gd<>uid://clh1r1t54fjr2<>res://Let's Fight Button.gd<>uid://hlp677bnerr6
 MenuArrow1.gd::GDScript::-1::1682847882::0::1::::<>Sprite2D<>::
 MenuArrow2.gd::GDScript::-1::1682847882::0::1::::<>Sprite2D<>::
 MenuArrow3.gd::GDScript::-1::1682847411::0::1::::<>Sprite2D<>::
-MonsterHP.gd::GDScript::-1::1682652717::0::1::::<>Label<>::
+MonsterHP.gd::GDScript::-1::1682979506::0::1::::<>Label<>::
 PlayerHP.gd::GDScript::-1::1682652717::0::1::::<>Label<>::
 PlayerHPLabel.gd::GDScript::-1::1682820440::0::1::::<>Label<>::
 PlayerNamePrompt.gd::GDScript::-1::1682652717::0::1::::<>Label<>::
 PlayerSPLabel.gd::GDScript::-1::1682820440::0::1::::<>Label<>::
-PlayerState.gd::GDScript::-1::1682857686::0::1::::<>Node<>::
-Pname Prompt.gd::GDScript::-1::1682652717::0::1::::<>Panel<>::
+PlayerState.gd::GDScript::-1::1682979176::0::1::::<>Node<>::
+Pname Prompt.gd::GDScript::-1::1682977397::0::1::::<>Panel<>::
 Quit Button.gd::GDScript::-1::1682652717::0::1::::<>Button<>::
 README.md::TextFile::-1::1682652717::0::1::::<><>::
 ShapingRect.gd::GDScript::-1::1682652717::0::1::::<>ReferenceRect<>::
 ShowPlayerStats.gd::GDScript::-1::1682652717::0::1::::<>Panel<>::
 SkillButton.gd::GDScript::-1::1682846845::0::1::::<>TextureButton<>::
+SkillsMenu.gd::GDScript::-1::1682977059::0::1::::<>Panel<>::
 SystemText.gd::GDScript::-1::1682853330::0::1::::<>Label<>::
+VictoryScn.tscn::PackedScene::1712553620272595559::1682979506::0::1::::<><>::res://CloseGame.gd<>uid://bdcxqtawvr4wo<>uid://ceegdl0gfbikf
 ::res://assets/::1682652717
 ::res://assets/BarAssets/::1682652717
 health.png::CompressedTexture2D::6274233137984680291::1682652717::1682652717::1::::<><>::

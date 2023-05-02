@@ -1,3 +1,5 @@
+Button
+Panel
 TextureRect
 Node
 Label
@@ -6,7 +8,6 @@ AnimationPlayer
 ProgressBar
 TextureButton
 TextureProgressBar
-Panel
 Container
 HBoxContainer
 VBoxContainer
@@ -16,7 +17,6 @@ ReferenceRect
 ColorRect
 TextEdit
 AudioStreamPlayer2D
-Button
 Control
 MarginContainer
 TileMap
